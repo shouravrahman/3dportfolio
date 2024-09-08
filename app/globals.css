@@ -21,7 +21,6 @@
 body {
   color: var(--foreground);
   background: var(--background);
-
   font-family: 'General Sans', sans-serif;
 }
 
