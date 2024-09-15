@@ -1,29 +1,23 @@
-import { Html, useProgress } from '@react-three/drei';
-
-const CanvasLoader = () => {
-   const { progress } = useProgress();
+const Loader = () => {
    return (
-      <Html
-         as="div"
-         center
-         style={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            flexDirection: 'column',
-         }}>
-         <span className="canvas-loader"></span>
-         <p
-            style={{
-               fontSize: 14,
-               color: '#F1F1F1',
-               fontWeight: 800,
-               marginTop: 40,
-            }}>
-            {progress !== 0 ? `${progress.toFixed(2)}%` : 'Loading...'}
-         </p>
-      </Html>
+      <div className='flex items-center justify-center h-dvh w-full bg-black text-white'>
+         <div className='flex flex-col items-center'>
+            {/* Rotating 3D Cube */}
+            <div className='loader-cube'>
+               <div className='cube'>
+                  <div className='cube-face cube-face-front'></div>
+                  <div className='cube-face cube-face-back'></div>
+                  <div className='cube-face cube-face-left'></div>
+                  <div className='cube-face cube-face-right'></div>
+                  <div className='cube-face cube-face-top'></div>
+                  <div className='cube-face cube-face-bottom'></div>
+               </div>
+            </div>
+            {/* Loader Text */}
+            <h2 className='mt-6 text-2xl'>Loading, please wait...</h2>
+         </div>
+      </div>
    );
 };
 
-export default CanvasLoader;
+export default Loader;

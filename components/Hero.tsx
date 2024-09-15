@@ -5,7 +5,7 @@ import { PerspectiveCamera } from "@react-three/drei"
 import { Canvas } from "@react-three/fiber"
 import Room from "./Room"
 import { Suspense } from "react"
-import CanvasLoader from "./Loader"
+import CanvasLoader from "./CanvasLoader"
 // import { Leva, useControls } from "leva"
 import { useMediaQuery } from "react-responsive"
 import { calculateSizes } from "@/constants"
@@ -15,6 +15,8 @@ import Rings from "./Rings"
 import Cube from "./Cube"
 import HeroCamera from "./HeroCamera"
 import Button from "./HeroButton"
+import Link from "next/link"
+import { Javascript } from "./Javascript"
 
 const Hero = () => {
    // const controls = useControls("Room", {
@@ -69,7 +71,7 @@ const Hero = () => {
             <p className="hero_tag text-gray_gradient">Building Websites & SAAS</p>
          </div>
 
-         <div className="w-full h-full absolute inset-0">
+         <div className="w-full  h-full absolute inset-0">
             {/* <Leva /> */}
             <Canvas className="w-full h-full">
                <Suspense fallback={<CanvasLoader />}>
@@ -85,6 +87,8 @@ const Hero = () => {
                      <Target position={sizes.targetPosition} />
                      <ReactLogo position={sizes.reactLogoPosition} />
                      <Rings position={sizes.ringPosition} />
+
+                     {/* <Javascript position={sizes.cubePosition} /> */}
                      <Cube position={sizes.cubePosition} />
 
                   </group>
@@ -94,9 +98,9 @@ const Hero = () => {
             </Canvas>
          </div>
          <div className="absolute bottom-7 left-0 right-0 w-full z-10 c-space">
-            <a href="#about" className="w-fit">
-               <Button name="Let's work together" isBeam containerClass="sm:w-fit w-full sm:min-w-96" />
-            </a>
+            <Link href="#about" className="w-fit">
+               <Button name="Let's work together" isBeam containerClass="sm:w-fit w-full sm:min-w-96 " />
+            </Link>
          </div>
       </section>
    )

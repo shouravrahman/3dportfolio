@@ -5,6 +5,10 @@ const nextConfig = { images: {
        protocol: 'https',
        hostname: 'cdn.sanity.io',
      },
+     {
+       protocol: 'https',
+       hostname: 'avatars.githubusercontent.com',
+     },
    ],
  },};
 

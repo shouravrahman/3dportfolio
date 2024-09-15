@@ -1,7 +1,29 @@
 import { groq } from "next-sanity";
 
 // about landing
-
+export const aboutPageQuery = groq`*[_type == "aboutPage"][0] {
+   intro {
+     title,
+     subtitle,
+     description,
+     buttonText,
+     buttonLink,
+     "image": image.asset->url
+   },
+   aboutSections[] {
+     title,
+     content
+   },
+   skills[] {
+     name
+   },
+   education {
+     degree,
+     institution,
+     year
+   }
+ }
+ `;
 export const aboutLandingSectionQuery = groq`
   *[_type == "aboutSection"] | order(order asc) {
     _id,
@@ -28,8 +50,7 @@ export const globeSectionQuery = groq`
 `;
 
 // projects landing
-export const allProjectsQuery = `
-  *[_type == "project"] {
+export const allProjectsQuery = groq`*[_type == "project"] {
 _id,
     title,
     subtitle,
@@ -51,7 +72,7 @@ _id,
     githubUrl
   }
 `;
-export const singleProjectQuery = `
+export const singleProjectQuery = groq`
   *[_type == "project" && slug.current == $slug][0] {
     _id,
     title,
