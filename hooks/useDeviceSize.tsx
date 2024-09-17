@@ -7,6 +7,7 @@ const useDeviceSize = (): DeviceSize => {
   const [deviceSize, setDeviceSize] = useState<DeviceSize>('desktop'); // Default to 'desktop'
 
   useEffect(() => {
+     if (!window) return;
      function getDeviceSize(): DeviceSize {
         const width = window.innerWidth;
       if (width >= 1200) {
