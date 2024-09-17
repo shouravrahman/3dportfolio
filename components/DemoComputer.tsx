@@ -4,7 +4,7 @@ import { useRef, useEffect } from 'react';
 import { useGLTF, useVideoTexture } from '@react-three/drei';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { BufferGeometry, Material } from 'three';
+
 
 
 const DemoComputer = (props: any) => {
