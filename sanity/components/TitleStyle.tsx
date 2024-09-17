@@ -1,6 +1,6 @@
 import React from 'react'
 
-const TitleStyle = props => (
+const TitleStyle = (props: any) => (
   <span style={{fontFamily: 'Garamond', fontSize: '2em'}}>{props.children} </span>
 )
 
