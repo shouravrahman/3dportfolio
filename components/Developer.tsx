@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { useGraph } from '@react-three/fiber';
 import { useAnimations, useFBX, useGLTF } from '@react-three/drei';
 import { SkeletonUtils } from 'three-stdlib';
-import { AnimationAction, Group } from 'three';
+import { Group } from 'three';
 
 
 const Developer = ({ animationName = 'idle', ...props }) => {

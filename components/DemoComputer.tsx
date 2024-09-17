@@ -5,14 +5,7 @@ import { useGLTF, useVideoTexture } from '@react-three/drei';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { BufferGeometry, Material } from 'three';
-interface ComGltf {
-   nodes: {
-      Cube: {
-         geometry: BufferGeometry;
-         material: Material;
-      };
-   };
-}
+
 
 const DemoComputer = (props: any) => {
    const group = useRef<any>();
