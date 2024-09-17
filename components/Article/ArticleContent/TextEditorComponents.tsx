@@ -3,7 +3,7 @@ import Link from "next/link";
 
 interface TextEditorProps {
     children: ReactNode;
-   value?: unknown
+   value?: any
 }
 
 export const P: React.FC<TextEditorProps> = ({ children }) =>  <p className="my-8 text-lg">{children}</p>
