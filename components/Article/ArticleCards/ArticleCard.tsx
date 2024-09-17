@@ -12,7 +12,7 @@ import { IArticleHeaderData } from "@/types/interfaces";
 interface IProp {
    article: IArticleHeaderData;
    path: string;
-   isExternal: boolean;
+   isExternal?: boolean;
 }
 
 const ArticleCard = ({ article, path }: IProp) => {
