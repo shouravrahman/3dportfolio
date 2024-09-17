@@ -65,7 +65,7 @@ const CallToAction: React.FC = () => (
             </span>
          </h2>
          <p className="mt-4 text-xl sm:text-2xl text-gray-300 text-center max-w-2xl animate-fade-in-up animation-delay-300">
-            Let's create something extraordinary together and make your digital dreams a reality.
+            Let&apos;s create something extraordinary together and make your digital dreams a reality.
          </p>
          <div className="mt-10 animate-fade-in-up animation-delay-600">
             <Link href="#about">
@@ -108,7 +108,7 @@ const SinglePortfolio: React.FC<{ project: Project }> = ({ project }) => {
          <ProjectFeatures features={project.features} />
 
          <div className="prose max-w-none md:prose-lg lg:prose-xl prose-img:rounded-xl prose-headings:underline prose-a:text-blue-600 prose-invert">
-            <PortableText value={project.body} />
+            <PortableText value={project.body} onMissingComponent={false} />
          </div>
 
          <CallToAction />

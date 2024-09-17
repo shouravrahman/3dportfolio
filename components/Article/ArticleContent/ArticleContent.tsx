@@ -1,6 +1,7 @@
 import { PortableText } from "@portabletext/react";
 
-const ArticleContent = ({ ARTICLE_CONTENT }) => {
+
+const ArticleContent = ({ ARTICLE_CONTENT }: any) => {
    const body = ARTICLE_CONTENT;
    return (
       <>

@@ -51,7 +51,7 @@ const About = async () => {
             <div className="flex flex-col lg:flex-row items-center justify-between gap-12 mb-20">
                <div className="lg:w-1/2">
                   <h1 className="text-4xl lg:text-5xl font-bold mb-6 animate-slideInLeft">
-                     Hey! I'm Shourav
+                     Hey! I&apos;m Shourav
                      <span className="text-white-500">(show-rob)</span>
                   </h1>
                   <h2 className="text-2xl lg:text-3xl font-semibold text-white-700 mb-8 animate-slideInLeft" style={{ animationDelay: '0.2s' }}>

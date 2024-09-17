@@ -23,7 +23,6 @@ const ArticleCard = ({ article, path }: IProp) => {
       body,
       tags,
       publishedAt,
-      meta_description,
       estimatedReadingTime,
       mainImage: {
          alt,

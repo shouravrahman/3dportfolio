@@ -32,7 +32,7 @@ const ImageArticle = ({
          )}
       >
          <Image
-            alt={alt}
+            alt={alt || "image"}
             loading='lazy'
             src={`${urlFor(src)}`}
             objectFit='contain'

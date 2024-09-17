@@ -8,7 +8,8 @@ const useDeviceSize = (): DeviceSize => {
 
   useEffect(() => {
     function getDeviceSize() {
-      const width = window.innerWidth;
+       if (window) {
+         const width = window.innerWidth;
       if (width >= 1200) {
         return 'desktop';
       } else if (width >= 768) {
@@ -16,6 +17,8 @@ const useDeviceSize = (): DeviceSize => {
       } else {
         return 'mobile';
       }
+       }
+
     }
 
     const handleResize = () => {

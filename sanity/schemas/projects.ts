@@ -17,6 +17,11 @@ export default defineType({
 			type: "string",
 		}),
 		defineField({
+			name: "subdesc",
+			title: "SUbdescription",
+			type: "string",
+		}),
+		defineField({
 			name: "slug",
 			title: "Slug",
 			type: "slug",
@@ -38,6 +43,21 @@ export default defineType({
 			options: {
 				hotspot: true,
 			},
+		}),
+		defineField({
+			name: "logo",
+			title: "Project Logo",
+			type: "image",
+		}),
+		defineField({
+			name: "spotlight",
+			title: "Project Spotlight",
+			type: "image",
+		}),
+		defineField({
+			name: "texture",
+			title: "Project Texture",
+			type: "video",
 		}),
 		defineField({
 			name: "galleryImages",

@@ -1,14 +1,14 @@
 "use client"
 
 import { useRef, useEffect } from 'react';
-import { useGLTF, useAnimations, useVideoTexture } from '@react-three/drei';
+import { useGLTF, useVideoTexture } from '@react-three/drei';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 
 const DemoComputer = (props) => {
    const group = useRef();
-   const { nodes, materials, animations } = useGLTF('/models/computer.glb');
-   const { actions } = useAnimations(animations, group);
+   const { nodes, materials } = useGLTF('/models/computer.glb');
+   // const { actions } = useAnimations(animations, group);
 
    const txt = useVideoTexture(props.texture ? props.texture : '/textures/project/project1.mp4');
 

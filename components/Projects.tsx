@@ -19,7 +19,7 @@ const Projects = () => {
 
 
 
-   const handleNavigation = (direction) => {
+   const handleNavigation = (direction: string) => {
       setSelectedProjectIndex((prevIndex) => {
          if (direction === 'previous') {
             return prevIndex === 0 ? projectCount - 1 : prevIndex - 1;

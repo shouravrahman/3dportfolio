@@ -25,7 +25,7 @@ export default async function PortfolioDetailsPage({ params }: Props) {
       query: singleProjectQuery,
       params: { slug: params.slug },
    });
-   console.log(project, "project=================")
+
    return (
       <section className="max-w-7xl mx-auto c-space my-20">
          <SinglePortfolio project={project} />
