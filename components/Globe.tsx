@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 
 const GlobeCard = () => {
    // State to manage globe section data
-   const [globeSection, setGlobeSection] = useState(null);
+   const [globeSection, setGlobeSection] = useState<any>(null);
    const [isLoading, setIsLoading] = useState(true); // State to manage loading
    const [error, setError] = useState(null); // State to manage errors
 
@@ -17,9 +17,9 @@ const GlobeCard = () => {
             const data = await sanityFetch({
                query: globeSectionQuery,
             });
-            console.log(data)
+
             setGlobeSection(data);
-         } catch (err) {
+         } catch (err: any) {
             console.error("Failed to fetch globe section data:", err);
             setError(err);
          } finally {
@@ -52,7 +52,6 @@ const GlobeCard = () => {
                height={326}
                width={326}
                backgroundColor="rgba(0, 0,0,0)"
-               backgroundImageOpacity={0.5}
                showAtmosphere
                showGraticules
                globeImageUrl={globeSection.globeImageUrl}

@@ -4,10 +4,19 @@ import { useRef, useEffect } from 'react';
 import { useGLTF, useVideoTexture } from '@react-three/drei';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
+import { BufferGeometry, Material } from 'three';
+interface ComGltf {
+   nodes: {
+      Cube: {
+         geometry: BufferGeometry;
+         material: Material;
+      };
+   };
+}
 
-const DemoComputer = (props) => {
-   const group = useRef();
-   const { nodes, materials } = useGLTF('/models/computer.glb');
+const DemoComputer = (props: any) => {
+   const group = useRef<any>();
+   const { nodes, materials } = useGLTF('/models/computer.glb') as any
    // const { actions } = useAnimations(animations, group);
 
    const txt = useVideoTexture(props.texture ? props.texture : '/textures/project/project1.mp4');
@@ -19,7 +28,7 @@ const DemoComputer = (props) => {
    }, [txt]);
 
    useGSAP(() => {
-      gsap.from(group.current.rotation, {
+      gsap.from(group.current?.rotation, {
          y: Math.PI / 2,
          duration: 1,
          ease: 'power3.out',

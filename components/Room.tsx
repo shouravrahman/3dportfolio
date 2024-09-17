@@ -1,8 +1,8 @@
 "use client"
 import { useGLTF, useTexture } from '@react-three/drei';
-const Room = (props) => {
+const Room = (props: any) => {
 
-   const { nodes, materials } = useGLTF('/models/hacker-room.glb');
+   const { nodes, materials } = useGLTF('/models/hacker-room.glb') as any
 
    const monitortxt = useTexture('/textures/desk/monitor.png');
    // const screenTxt = useTexture('/textures/desk/screen.png');

@@ -2,14 +2,15 @@ import React, { useEffect, useRef } from 'react';
 import { useGraph } from '@react-three/fiber';
 import { useAnimations, useFBX, useGLTF } from '@react-three/drei';
 import { SkeletonUtils } from 'three-stdlib';
+import { AnimationAction, Group } from 'three';
 
 
 const Developer = ({ animationName = 'idle', ...props }) => {
-   const group = useRef();
+   const group = useRef<Group>(null);
 
-   const { scene } = useGLTF('/models/animations/developer.glb');
+   const { scene } = useGLTF('/models/animations/developer.glb') as any
    const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene]);
-   const { nodes, materials } = useGraph(clone);
+   const { nodes, materials } = useGraph(clone) as any
 
    const { animations: idleAnimation } = useFBX('/models/animations/idle.fbx');
    const { animations: saluteAnimation } = useFBX('/models/animations/salute.fbx');
@@ -27,8 +28,8 @@ const Developer = ({ animationName = 'idle', ...props }) => {
    );
 
    useEffect(() => {
-      actions[animationName].reset().fadeIn(0.5).play();
-      return () => actions[animationName].fadeOut(0.5);
+      actions[animationName]?.reset().fadeIn(0.5).play();
+      return () => { actions[animationName]?.fadeOut(0.5); }
    }, [animationName, actions]);
 
    return (
