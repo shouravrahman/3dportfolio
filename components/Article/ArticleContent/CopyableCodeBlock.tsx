@@ -1,9 +1,10 @@
+
 'use client'
 import { useState } from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { atomDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
-const CopyableCodeBlock = ({ children }) => {
+const CopyableCodeBlock = ({ children }: { children: any }) => {
   const [isCopied, setIsCopied] = useState(false);
   const handleCopyClick = () => {
     const textToCopy = children?.code;
@@ -17,7 +18,7 @@ const CopyableCodeBlock = ({ children }) => {
 
   const codeHighlightCache = new Map();
 
-  const retrieveCodeFromHighlightCache = (language, content) => {
+   const retrieveCodeFromHighlightCache = (language: string, content: string) => {
     const cachedItem = codeHighlightCache.get(content);
     if (cachedItem === undefined) {
       const highlighterProps = {
@@ -29,8 +30,8 @@ const CopyableCodeBlock = ({ children }) => {
           borderRadius: "10px"
         }
       }
-      SyntaxHighlighter(highlighterProps);
-      const cachedVar = SyntaxHighlighter(highlighterProps);
+
+       const cachedVar = new SyntaxHighlighter(highlighterProps);
       codeHighlightCache.set(content, cachedVar);
       return cachedVar;
     };

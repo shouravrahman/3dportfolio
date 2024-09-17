@@ -3,7 +3,7 @@ import React from 'react'
 import Image from "next/image";
 import { urlFor } from '@/sanity/lib/image';
 
-const ImagePortableCom = ({ value }) => {
+const ImagePortableCom = ({ value }: { value: any }) => {
    if (!value?.asset?._ref) {
       return value;
    }
