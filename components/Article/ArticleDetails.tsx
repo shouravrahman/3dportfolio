@@ -8,9 +8,8 @@ import ArticleContent from "./ArticleContent/ArticleContent";
 import SocialShare from "./SocialShare";
 
 
-const ArticleDetails = ({ post, relatedPosts, isSnippet, isSeries }: any) => {
+const ArticleDetails = ({ post, isSnippet }: any) => {
    const target: RefObject<HTMLDivElement> = React.createRef();
-   const authorInfo = post.author;
    const isBrowser = () => typeof window !== "undefined";
 
    function scrollToTop() {

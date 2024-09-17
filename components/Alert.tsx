@@ -1,4 +1,4 @@
-const Alert = ({ type, text }) => {
+const Alert = ({ type, text }: { type: string, text: string }) => {
    return (
       <div className="fixed bottom-5 right-5 flex justify-center items-center z-50">
          <div

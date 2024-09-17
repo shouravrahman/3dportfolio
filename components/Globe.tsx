@@ -4,7 +4,6 @@ import Globe from "react-globe.gl";
 import { globeSectionQuery } from "@/sanity/lib/queries";
 import { sanityFetch } from "@/sanity/lib/sanityFetch";
 import { useEffect, useState } from "react";
-import Button from "./Button"; // Ensure Button component is imported
 
 const GlobeCard = () => {
    // State to manage globe section data

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 interface TextEditorProps {
     children: ReactNode;
-    value?: any
+   value?: unknown
 }
 
 export const P: React.FC<TextEditorProps> = ({ children }) =>  <p className="my-8 text-lg">{children}</p>
@@ -38,4 +38,3 @@ export const LinkTag: React.FC<TextEditorProps> = ({ children, value }) => {
         </a> : <Link href={value.href} className="text-appPurple-100 dark:text-appRed-100 text-decoration-underline">{children}</Link>
     )
 }
-

@@ -1,5 +1,4 @@
 import { Float, useGLTF } from '@react-three/drei';
-import { FC } from 'react';
 import { Material, Mesh } from 'three';
 type ReactLogoProps = JSX.IntrinsicElements['group'] & {
    position?: [number, number, number];

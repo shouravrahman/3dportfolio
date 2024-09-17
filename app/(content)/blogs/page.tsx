@@ -4,9 +4,7 @@ import { WEBSITE_NAME, META_SEO_KEYWORDS } from "@/constants/appSetup";
 import { SanityDocument } from "@sanity/client";
 import { postsQuery } from "@/sanity/lib/queries";
 import { sanityFetch } from "@/sanity/lib/sanityFetch";
-import Text from "@/components/Article/Text";
 import HomeArticles from "@/components/Article/HomeArticles";
-import { SimpleLayout } from "@/components/Article/SimpleLayout";
 
 export const metadata: Metadata = {
    title: "Articles",

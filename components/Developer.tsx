@@ -3,6 +3,7 @@ import { useGraph } from '@react-three/fiber';
 import { useAnimations, useFBX, useGLTF } from '@react-three/drei';
 import { SkeletonUtils } from 'three-stdlib';
 
+
 const Developer = ({ animationName = 'idle', ...props }) => {
    const group = useRef();
 
@@ -28,7 +29,7 @@ const Developer = ({ animationName = 'idle', ...props }) => {
    useEffect(() => {
       actions[animationName].reset().fadeIn(0.5).play();
       return () => actions[animationName].fadeOut(0.5);
-   }, [animationName]);
+   }, [animationName, actions]);
 
    return (
       <group ref={group} {...props} dispose={null}>

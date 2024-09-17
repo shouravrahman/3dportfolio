@@ -9,7 +9,7 @@ interface RelatedArticleProps {
 const RelatedArticles: React.FC<RelatedArticleProps> = ({
    relatedPosts,
    isSnippet,
-   isSeries,
+
 }) => {
    return (
       <>

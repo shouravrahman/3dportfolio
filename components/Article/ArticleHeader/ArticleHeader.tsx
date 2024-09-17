@@ -1,11 +1,9 @@
 
 import ArticleTags from "../ArticleTags/ArticleTags";
 import ArticleImage from "../ArticleImage";
-import classes from "./ArticleHeader.module.scss";
 
 import Image from "next/legacy/image";
 import { format } from "date-fns";
-import Link from "next/link";
 import { urlFor } from "@/sanity/lib/image";
 
 const ArticleHeader = ({ ARTICLE_DETAILS, isSnippet }: any) => {

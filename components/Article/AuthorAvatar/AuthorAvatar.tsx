@@ -20,7 +20,7 @@ const AuthorAvatar = ({
    width,
    quality,
    className,
-   layout,
+
 }: AuthorAvatarProps) => {
    return (
       <div

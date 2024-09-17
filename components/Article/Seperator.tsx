@@ -12,7 +12,7 @@ const Seperator = ({ line = false, dots = false }: iProps) => {
                dots ? <div className='section_seperator_dots'>
                   {
                      [...Array(5)].map((i) => (
-                        <span key={Math.random()} className="dark:bg-white"></span>
+                        <span key={i * Math.random()} className="dark:bg-white"></span>
                      ))
                   }
                </div> :

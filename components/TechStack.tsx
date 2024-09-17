@@ -1,8 +1,4 @@
 "use client";
-import { Icon } from "@/types/interfaces";
-import Image from "next/image";
-import { IconType } from "react-icons";
-import * as ReactIcons from "react-icons/fa";
 import { ITechStack } from "@/types/interfaces";
 import Link from "next/link";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";

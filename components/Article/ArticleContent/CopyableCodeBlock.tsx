@@ -1,7 +1,7 @@
 'use client'
 import { useState } from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { coldarkDark, dark,nightOwl ,atomDark} from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { atomDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 const CopyableCodeBlock = ({ children }) => {
   const [isCopied, setIsCopied] = useState(false);

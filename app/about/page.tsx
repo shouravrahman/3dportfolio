@@ -1,11 +1,10 @@
 // pages/about.tsx
 import { Metadata } from 'next';
 import { WEBSITE_NAME, META_SEO_KEYWORDS } from '@/constants/appSetup';
-import { SanityDocument } from '@sanity/client';
 
 import Image from 'next/image';
 import { sanityFetch } from '@/sanity/lib/sanityFetch';
-import { aboutPageQuery, postsQuery } from '@/sanity/lib/queries';
+import { aboutPageQuery } from '@/sanity/lib/queries';
 
 export const metadata: Metadata = {
    title: 'About',

@@ -1,7 +1,5 @@
 
-import React from "react";
 import SocialLink from "./SocialLink";
-import { BsDownload } from "react-icons/bs";
 import Button from "./HeroButton";
 
 const ProfileCard = () => {

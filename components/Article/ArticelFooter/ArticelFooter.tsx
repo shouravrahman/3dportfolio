@@ -6,7 +6,7 @@ import SocialShare from "../SocialShare";
 import useDeviceSize from "@/hooks/useDeviceSize";
 
 
-const ArticelFooter = ({ isSeries, relatedPosts, authorInfo, isSnippet }: any) => {
+const ArticelFooter = ({ isSeries, relatedPosts, isSnippet }: any) => {
    const deviceSize: any = useDeviceSize();
 
    const wrapperClasses =
@@ -16,21 +16,13 @@ const ArticelFooter = ({ isSeries, relatedPosts, authorInfo, isSnippet }: any) =
          <div className="px-4">
             <div className="mx-auto lg:px-[15px] mt-20">
                <div className={"flex flex-wrap"}>
-                  <h1 className="px-3 w-full mb-5 text-xl md:text-3xl font-bold dark:text-appRed-100 text-appPurple-100">
+                  <h1 className="px-3 w-full mb-5 text-xl md:text-3xl font-bold ">
                      LEAVE A COMMENT
                   </h1>
 
                </div>
             </div>
-            {/* <div className="mx-auto lg:px-[15px] mt-20">
-        <div className={"flex flex-wrap"}>
-          <h1 className="px-3 w-full mb-5 text-xl md:text-3xl font-bold dark:text-appRed-100 text-appPurple-100">
-            WRITTEN BY
-          </h1>
-          <hr className="border-1 mb-5 w-[98%] mx-auto" />
-          <ArticleAuthorCard author={authorInfo}/>
-        </div>
-    </div> */}
+
 
             {deviceSize !== "desktop" ? (
                <div className={wrapperClasses}>

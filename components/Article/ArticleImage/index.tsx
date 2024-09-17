@@ -17,7 +17,7 @@ interface IArticleImage {
 const ImageArticle = ({
    src,
    caption,
-   size = ImageSize.DEFAULT,
+   // size = ImageSize.DEFAULT,
    alt,
    className,
    imageWidth,

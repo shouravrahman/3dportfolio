@@ -16,7 +16,6 @@ import Cube from "./Cube"
 import HeroCamera from "./HeroCamera"
 import Button from "./HeroButton"
 import Link from "next/link"
-import { Javascript } from "./Javascript"
 
 const Hero = () => {
    // const controls = useControls("Room", {

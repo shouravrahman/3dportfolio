@@ -2,7 +2,6 @@ import Link from "next/link";
 
 
 import ArticleTags from "../ArticleTags/ArticleTags";
-import Image from "next/legacy/image";
 import { format } from "date-fns";
 import readingTime from "reading-time";
 import { IArticleHeaderData } from "@/types/interfaces";
@@ -27,10 +26,7 @@ const RelatedArticleCard = ({ article, path, isExternal }: IProp) => {
       meta_description,
 
       estimatedReadingTime,
-      mainImage: {
-         alt,
-         asset: { _ref },
-      },
+
    } = article;
    const readTime = readingTime(body ? body : []);
 

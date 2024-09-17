@@ -6,7 +6,6 @@ import ArticleTags from "../ArticleTags/ArticleTags";
 import Image from "next/image";
 import { format } from "date-fns";
 import readingTime from "reading-time";
-import { combineClasses } from "@/utils/combineClasses";
 import { urlFor } from "@/sanity/lib/image";
 import { IArticleHeaderData } from "@/types/interfaces";
 
@@ -16,7 +15,7 @@ interface IProp {
    isExternal: boolean;
 }
 
-const ArticleCard = ({ article, path, isExternal }: IProp) => {
+const ArticleCard = ({ article, path }: IProp) => {
    // set url and path
    const {
       // _createdAt,
@@ -82,15 +81,6 @@ const ArticleCard = ({ article, path, isExternal }: IProp) => {
                         {title}
                      </h1>
                   </Link>
-
-
-                  {/* <p
-                     className='article_card__intro
-                        text-sm font-normal mt-2 md:mt-1'
-
-                  >
-                     {meta_description?.slice(0, 150)} ...
-                  </p> */}
                   <ArticleTags tags={tags} isLight={false} />
                </div>
             </div>

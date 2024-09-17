@@ -1,6 +1,5 @@
 import { PortableText } from "@portabletext/react";
 
-import articePortableText from './PortableComponent'
 const ArticleContent = ({ ARTICLE_CONTENT }) => {
    const body = ARTICLE_CONTENT;
    return (

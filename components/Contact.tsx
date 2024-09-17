@@ -2,6 +2,7 @@
 import useAlert from '@/hooks/useAlert';
 import emailjs from '@emailjs/browser';
 import { useRef, useState } from 'react';
+import Alert from './Alert';
 
 
 
@@ -31,8 +32,7 @@ const Contact = () => {
                from_email: form.email,
                to_email: 'sujata@jsmastery.pro',
                message: form.message,
-            },
-            import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY,
+            }
          )
          .then(
             () => {
