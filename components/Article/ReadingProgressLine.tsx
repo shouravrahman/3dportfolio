@@ -4,7 +4,7 @@ import React, { useState } from "react";
 const ReadingProgressLine = ({ target }: { target: any }) => {
   const [readingProgress, setReadingProgress] = useState(0);
   const scrollListener = () => {
-    if (!target.current) {
+     if (!target.current || typeof window === undefined) {
       return;
     }
 
