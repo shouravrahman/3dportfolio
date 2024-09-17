@@ -19,8 +19,6 @@ const HomeArticles: React.FC<HomeArticleProps> = ({
    isArchive,
    noOfArticle,
    articles,
-   isSeries,
-   isExternal
 }) => {
    const articlesPerPage = noOfArticle || 9;
 
