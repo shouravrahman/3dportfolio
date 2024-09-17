@@ -1,31 +1,31 @@
 "use client"
 import useAlert from '@/hooks/useAlert';
 import emailjs from '@emailjs/browser';
-import { useRef, useState } from 'react';
+import { FormEvent, useRef, useState } from 'react';
 import Alert from './Alert';
 
 
 
 const Contact = () => {
-   const formRef = useRef();
+   const formRef = useRef<HTMLFormElement>(null);
 
    const { alert, showAlert, hideAlert } = useAlert();
    const [loading, setLoading] = useState(false);
 
-   const [form, setForm] = useState({ name: '', email: '', message: '' });
+   const [form, setForm] = useState<{ name: string, email: string, message: string }>({ name: '', email: '', message: '' });
 
-   const handleChange = ({ target: { name, value } }) => {
+   const handleChange = ({ target: { name, value } }: { target: { name: string, value: string } }) => {
       setForm({ ...form, [name]: value });
    };
 
-   const handleSubmit = (e) => {
+   const handleSubmit = (e: FormEvent) => {
       e.preventDefault();
       setLoading(true);
 
       emailjs
          .send(
-            process.env.EMAILJS_SERVICE_ID,
-            process.env.EMAILJS_TEMPLATE_ID,
+            process.env.EMAILJS_SERVICE_ID || "",
+            process.env.EMAILJS_TEMPLATE_ID || "",
             {
                from_name: form.name,
                to_name: 'JavaScript Mastery',
@@ -44,13 +44,13 @@ const Contact = () => {
                });
 
                setTimeout(() => {
-                  hideAlert(false);
+                  hideAlert();
                   setForm({
                      name: '',
                      email: '',
                      message: '',
                   });
-               }, [3000]);
+               }, 3000);
             },
             (error) => {
                setLoading(false);
