@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { string } from "three/webgpu";
 
 const useAlert = () => {
 	const [alert, setAlert] = useState({

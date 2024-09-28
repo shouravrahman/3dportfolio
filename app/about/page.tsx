@@ -44,7 +44,7 @@ interface AboutPageData {
 const About = async () => {
    const about = await sanityFetch<AboutPageData>({ query: aboutPageQuery });
 
-   console.log(about)
+
    return (
       <section className="c-space min-h-screen pt-20 md:pt-32 pb-20 text-white max-w-7xl mx-auto">
          <div className=" mx-auto px-4">

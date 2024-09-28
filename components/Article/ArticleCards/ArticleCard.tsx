@@ -32,59 +32,67 @@ const ArticleCard = ({ article, path }: IProp) => {
    const readTime = readingTime(body ? body : []);
 
    return (
-      <div
-         className="w-full"
-      >
-         <div
-            className=' card w-full max-w-[400px]  dark:drop-shadow-lg flex flex-col justify-between pb-5'
-         >
-            <div>
-               <div className={"rounded-t-[4px] overflow-hidden h-[200px] relative"}>
-                  <Image
-                     src={`${urlFor(_ref)}`}
-                     alt={alt}
-                     layout="fill"
-                     quality={70}
-                     priority={true}
-                     blurDataURL={`${urlFor(_ref)}`}
-                     placeholder="blur"
-                  />
-               </div>
+		<div className="w-full">
+			<div className=" card w-full max-w-[400px]  dark:drop-shadow-lg flex flex-col justify-between pb-5">
+				<div>
+					<div
+						className={
+							"rounded-t-[4px] overflow-hidden h-[200px] relative"
+						}
+					>
+						<Image
+							src={`${urlFor(_ref)}`}
+							alt={alt}
+							width={500}
+							height={500}
+							quality={70}
+							priority={true}
+							blurDataURL={`${urlFor(_ref)}`}
+							placeholder="blur"
+						/>
+					</div>
 
-               <div className={"d-block  py-0"}>
-                  <p
-                     className={"font-bold text-xs pt-3 mb-0 md:mb-3 text-appRed-100"}
-                  >
-                     <span className="pr-1">
-                        {format(new Date(publishedAt), "MMMM d, yyyy")}
-                     </span>{" "}
-                     {readTime.text !== "0 min read" && (
-                        <>
-                           {" "}
-                           |{" "}
-                           <span className="pl-1 text-transfrom-capitalize">
-                              {" "}
-                              {estimatedReadingTime ? estimatedReadingTime : '2'} mins
-                           </span>{" "}
-                        </>
-                     )}
-                  </p>
+					<div className={"d-block  py-0"}>
+						<p
+							className={
+								"font-bold text-xs pt-3 mb-0 md:mb-3 text-appRed-100"
+							}
+						>
+							<span className="pr-1">
+								{format(new Date(publishedAt), "MMMM d, yyyy")}
+							</span>{" "}
+							{readTime.text !== "0 min read" && (
+								<>
+									{" "}
+									|{" "}
+									<span className="pl-1 text-transfrom-capitalize">
+										{" "}
+										{estimatedReadingTime ?
+											estimatedReadingTime
+										:	"2"}{" "}
+										mins
+									</span>{" "}
+								</>
+							)}
+						</p>
 
-
-                  <Link href={path}>
-                     <h1
-                        className={
-                           "prose prose-invert font-bold cursor-pointer tracking-wide  transition-colors duration-300 mb-3"
-                        }
-                     >
-                        {title}
-                     </h1>
-                  </Link>
-                  <ArticleTags tags={tags} isLight={false} />
-               </div>
-            </div>
-         </div>
-      </div>
+						<Link href={path}>
+							<h1
+								className={
+									"prose prose-invert font-bold cursor-pointer tracking-wide  transition-colors duration-300 mb-3"
+								}
+							>
+								{title}
+							</h1>
+						</Link>
+						<ArticleTags
+							tags={tags}
+							isLight={false}
+						/>
+					</div>
+				</div>
+			</div>
+		</div>
    );
 };
 

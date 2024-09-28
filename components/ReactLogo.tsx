@@ -1,3 +1,4 @@
+"use client"
 import { Float, useGLTF } from '@react-three/drei';
 import { Material, Mesh } from 'three';
 type ReactLogoProps = JSX.IntrinsicElements['group'] & {

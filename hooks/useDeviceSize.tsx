@@ -1,4 +1,4 @@
-"use client";
+
 import { useState, useEffect } from 'react';
 
 type DeviceSize = 'mobile' | 'tablet' | 'desktop';

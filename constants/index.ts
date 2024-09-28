@@ -246,7 +246,27 @@ export const myProjects = [
 		],
 	},
 ];
-
+export const educationExperiences = [
+	{
+		institution: "University of Example",
+		degree: "Bachelor of Science in Computer Science",
+		duration: "2018 - 2022",
+		description:
+			"Focused on algorithms, data structures, and software engineering principles.",
+		icon: "/path/to/university-icon.png",
+		animation: "study",
+	},
+	{
+		institution: "Tech Institute",
+		degree: "Full Stack Web Development Bootcamp",
+		duration: "Summer 2023",
+		description:
+			"Intensive program covering modern web technologies and best practices.",
+		icon: "/path/to/bootcamp-icon.png",
+		animation: "code",
+	},
+	// Add more education experiences as needed
+];
 type Sizes = {
 	deskScale: number;
 	deskPosition: [number, number, number];

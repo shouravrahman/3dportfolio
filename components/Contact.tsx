@@ -52,13 +52,13 @@ const Contact = () => {
                   });
                }, 3000);
             },
-            (error) => {
+            () => {
                setLoading(false);
-               console.error(error);
+               // console.log(error)
 
                showAlert({
                   show: true,
-                  text: "I didn't receive your message 😢",
+                  text: "Sorry I didn't receive your message 😢",
                   type: 'danger',
                });
             },

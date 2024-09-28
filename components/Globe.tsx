@@ -1,9 +1,13 @@
 "use client";
 
-import Globe from "react-globe.gl";
+
 import { globeSectionQuery } from "@/sanity/lib/queries";
 import { sanityFetch } from "@/sanity/lib/sanityFetch";
+import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
+
+
+const Globe = dynamic(() => import("react-globe.gl"), { ssr: false });
 
 const GlobeCard = () => {
    // State to manage globe section data
@@ -20,7 +24,7 @@ const GlobeCard = () => {
 
             setGlobeSection(data);
          } catch (err: any) {
-            console.error("Failed to fetch globe section data:", err);
+            // console.error("Failed to fetch globe section data:", err);
             setError(err);
          } finally {
             setIsLoading(false);
