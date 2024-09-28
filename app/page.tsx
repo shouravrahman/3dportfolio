@@ -1,4 +1,3 @@
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import About from "@/components/About";
 import HomeArticles from "@/components/Article/HomeArticles";
 import Contact from "@/components/Contact";
